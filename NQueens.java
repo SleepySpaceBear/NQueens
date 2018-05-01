@@ -29,9 +29,9 @@ class NQueens {
 		for(int i = 0; i < size; i++) {
 			if(isSafe(x, i)) {
 				if(x < size - 1) {
-					board[x][i] = 1;
+					board[x][i] = true;
 					solve(x + 1);
-					board[x][i] = 0;
+					board[x][i] = false;
 				}
 				else {
 					solutions++;
