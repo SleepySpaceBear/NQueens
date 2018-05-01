@@ -30,7 +30,7 @@ class NQueens {
 
 	static void solve(int x) {
 		for(int i = 0; i < size; i++) {
-			if(checkY(i) && checkDiag(x, i)) {
+			if(isSafe(x, i)) {
 				if(x < size - 1) {
 					board[x][i] = 1;
 					solve(x + 1);
@@ -43,17 +43,13 @@ class NQueens {
 		}
 	}
 
-	static boolean checkY(int y) {
+	static boolean isSafe(int x, int y) {
 		for(int i = 0; i < size; i++) {
 			if(board[i][y] != 0) {
 				return false;
 			}
 		}
 
-		return true;
-	}
-
-	static boolean checkDiag(int x, int y) {
 		for(int i = x, j = y; i < size && j < size; i++, j++) {
 			if(board[i][j] != 0) {
 				return false;
