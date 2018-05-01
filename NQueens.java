@@ -3,10 +3,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 class NQueens {
-	//1  means queen
-	//0  means safe
-
-	private static int[][] board;
+	private static boolean[][] board;
 	private static int size;
 	private static int solutions = 0;
 
@@ -45,28 +42,28 @@ class NQueens {
 
 	static boolean isSafe(int x, int y) {
 		for(int i = 0; i < size; i++) {
-			if(board[i][y] != 0) {
+			if(board[i][y]) {
 				return false;
 			}
 		}
 
 		for(int i = x, j = y; i < size && j < size; i++, j++) {
-			if(board[i][j] != 0) {
+			if(board[i][j]) {
 				return false;
 			}
 		}
 		for(int i = x, j = y; i >= 0 && j < size; i--, j++) {
-			if(board[i][j] != 0) {
+			if(board[i][j]) {
 				return false;
 			}
 		}
 		for(int i = x, j = y; i < size && j >= 0; i++, j--) {
-			if(board[i][j] != 0) {
+			if(board[i][j]) {
 				return false;
 			}
 		}
 		for(int i = x, j = y; i >= 0 && j >= 0; i--, j--) {
-			if(board[i][j] != 0) {
+			if(board[i][j]) {
 				return false;
 			}
 		}
