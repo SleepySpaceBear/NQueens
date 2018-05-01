@@ -12,7 +12,7 @@ class NQueens {
 
 		System.out.println("Enter size of board: ");
 		size = keyboard.nextInt();
-		board = new int[size][size];
+		board = new boolean[size][size];
 
 		solve();
 
