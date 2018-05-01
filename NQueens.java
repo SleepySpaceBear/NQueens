@@ -18,6 +18,8 @@ class NQueens {
 		board = new int[size][size];
 
 		solve();
+
+		keyboard.close();
 	}
 
 	static void solve() {
