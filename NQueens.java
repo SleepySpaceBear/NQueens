@@ -13,16 +13,12 @@ class NQueens {
 		System.out.println("Enter size of board: ");
 		size = keyboard.nextInt();
 		board = new boolean[size][size];
-
-		solve();
-
-		keyboard.close();
-	}
-
-	static void solve() {
+		
 		solve(0);
 
 		System.out.println(solutions);
+
+		keyboard.close();
 	}
 
 	static void solve(int x) {
