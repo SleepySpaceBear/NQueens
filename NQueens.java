@@ -24,13 +24,13 @@ class NQueens {
 	static void solve(int x) {
 		for(int i = 0; i < size; i++) {
 			if(isSafe(x, i)) {
-				if(x < size - 1) {
+				if(x == size - 1) {
+					solutions++;
+				}
+				else {
 					board[x][i] = true;
 					solve(x + 1);
 					board[x][i] = false;
-				}
-				else {
-					solutions++;
 				}		
 			}
 		}
