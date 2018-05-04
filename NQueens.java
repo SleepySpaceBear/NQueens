@@ -37,7 +37,7 @@ class NQueens {
 	}
 
 	static boolean isSafe(int x, int y) {
-		for(int i = 0; i < size; i++) {
+		for(int i = 0; i < x; i++) {
 			if(board[i][y]) {
 				return false;
 			}
