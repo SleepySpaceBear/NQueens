@@ -5,7 +5,7 @@ import java.util.Scanner;
 class NQueens {
 	private static boolean[][] board;
 	private static int size;
-	private static int solutions = 0;
+	private static long solutions = 0;
 
 	public static void main(String[] args) {
 		Scanner keyboard = new Scanner(System.in);
